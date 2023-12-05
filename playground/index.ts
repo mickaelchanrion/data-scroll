@@ -1,3 +1,4 @@
-import { test } from "../src";
+/* eslint-disable unicorn/no-empty-file */
+// import { useDataScroll } from '../src'
 
-console.log(test());
+// TODO: Create playground

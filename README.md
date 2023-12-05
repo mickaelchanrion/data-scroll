@@ -1,11 +1,11 @@
-# packageName
+# data-scroll
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![bundle][bundle-src]][bundle-href]
 [![Codecov][codecov-src]][codecov-href]
 
-This is my package description.
+Scroll parallax, animation from/to using data attributes
 
 ## Usage
 
@@ -13,26 +13,26 @@ Install package:
 
 ```sh
 # npm
-npm install packageName
+npm install data-scroll
 
 # yarn
-yarn add packageName
+yarn add data-scroll
 
 # pnpm
-pnpm install packageName
+pnpm install data-scroll
 
 # bun
-bun install packageName
+bun install data-scroll
 ```
 
 Import:
 
 ```js
 // ESM
-import {} from "packageName";
+import {} from "data-scroll";
 
 // CommonJS
-const {} = require("packageName");
+const {} = require("data-scroll");
 ```
 
 ## Development
@@ -51,11 +51,11 @@ Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-version-href]: https://npmjs.com/package/packageName
-[npm-downloads-src]: https://img.shields.io/npm/dm/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-downloads-href]: https://npmjs.com/package/packageName
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/packageName/main?style=flat&colorA=18181B&colorB=F0DB4F
-[codecov-href]: https://codecov.io/gh/unjs/packageName
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[bundle-href]: https://bundlephobia.com/result?p=packageName
+[npm-version-src]: https://img.shields.io/npm/v/data-scroll?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-version-href]: https://npmjs.com/package/data-scroll
+[npm-downloads-src]: https://img.shields.io/npm/dm/data-scroll?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-downloads-href]: https://npmjs.com/package/data-scroll
+[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/data-scroll/main?style=flat&colorA=18181B&colorB=F0DB4F
+[codecov-href]: https://codecov.io/gh/unjs/data-scroll
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/data-scroll?style=flat&colorA=18181B&colorB=F0DB4F
+[bundle-href]: https://bundlephobia.com/result?p=data-scroll
