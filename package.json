@@ -1,6 +1,6 @@
 {
   "name": "data-scroll",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scroll parallax, animation from/to using data attributes",
   "repository": "mickaelchanrion/data-scroll",
   "license": "MIT",
