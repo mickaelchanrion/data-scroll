@@ -1,14 +1,16 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+gsap.registerPlugin(ScrollTrigger)
+
 type Screens = Record<string, string>
 export interface UseDataScrollOptions {
   autoStart?: boolean
   screens?: Screens
   selector?: string
-  getSpeed?: (target: HTMLElement) => string | undefined
-  getFrom?: (target: HTMLElement) => gsap.TweenVars | undefined
-  getTo?: (target: HTMLElement) => gsap.TweenVars | undefined
+  getSpeed?: (target: HTMLElement) => string | void
+  getFrom?: (target: HTMLElement) => gsap.TweenVars | void
+  getTo?: (target: HTMLElement) => gsap.TweenVars | void
   getUseMarkers?: (target: HTMLElement) => boolean
 }
 
@@ -31,8 +33,7 @@ let matchMedia: gsap.MatchMedia
 
 function getVariables(element: HTMLElement, dataKey: string) {
   const data = element.dataset[dataKey]
-  if (!data) return
-  return JSON.parse(data) as gsap.TweenVars
+  if (data) return JSON.parse(data) as gsap.TweenVars
 }
 
 function getMediaQuery(
@@ -43,7 +44,8 @@ function getMediaQuery(
   if (!screens) screens = defaultScreen
   if (!screen) {
     if (type === 'min') return '(min-width: 0px)'
-    if (type === 'max') throw new Error('Only min is supported without screen.')
+    if (type === 'max')
+      throw new Error('Only the type "min" is allowed if screen is undefined.')
     return undefined as never
   }
 
@@ -205,7 +207,11 @@ function apply(target: HTMLElement, options?: ApplyOptions) {
       )
 
       // Prevent the element from being visible before the animation starts
-      if (speed > 1 && startOffset !== 0) {
+      if (
+        speed > 1 &&
+        startOffset !== 0 &&
+        ScrollTrigger.positionInViewport(target, 'bottom') > 1
+      ) {
         gsap.set(target, {
           visibility: 'hidden',
         })
