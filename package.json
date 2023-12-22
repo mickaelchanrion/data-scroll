@@ -2,7 +2,10 @@
   "name": "data-scroll",
   "version": "0.0.3",
   "description": "Scroll parallax, animation from/to using data attributes",
-  "repository": "mickaelchanrion/data-scroll",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickaelchanrion/data-scroll.git"
+  },
   "license": "MIT",
   "author": "Mickael Chanrion",
   "sideEffects": false,
