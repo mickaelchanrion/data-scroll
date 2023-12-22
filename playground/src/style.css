@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --box-height: 8rem;
+}
+
+html {
+  @apply bg-gradient-to-b from-stone-800 to-stone-950 bg-fixed text-white;
+}
+
+body {
+  height: 100dvh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.07) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size:
+    var(--box-height) var(--box-height),
+    var(--box-height) var(--box-height),
+    calc(var(--box-height) / 5) calc(var(--box-height) / 5),
+    calc(var(--box-height) / 5) calc(var(--box-height) / 5);
+  background-position:
+    -2px calc(50vh - 1px),
+    -2px calc(50vh - 1px),
+    -1px calc(50vh - 0px),
+    -1px calc(50vh - 0px);
+  background-attachment: fixed;
+}
+
+.box {
+  @apply relative flex items-center justify-center rounded-xl bg-gradient-to-br from-lime-300 to-emerald-300 font-semibold text-stone-950;
+  height: var(--box-height);
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataScroll demo</title>
+  </head>
+  <body class="pb-[200vh] pt-[150vh]">
+    <hr class="fixed inset-x-0 top-1/2 border-rose-600" />
+    <div class="relative grid grid-cols-5 items-center gap-4 px-8">
+      <hr class="absolute inset-x-0 top-1/2 border-current" />
+      <div data-scroll-speed="0.5" data-scroll-to='{"rotate": 360}' class="box">
+        0.5
+      </div>
+      <div data-scroll-speed="0 md:0.75" class="scroll-crazy box">
+        0 md:0.75
+      </div>
+      <div class="box">ref</div>
+      <div data-scroll-speed="1.5" class="box">1.5</div>
+      <div data-scroll-speed="2" data-scroll-markers class="box">2</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
