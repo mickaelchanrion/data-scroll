@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.0.5
+
+[compare changes](https://github.com/mickaelchanrion/data-scroll/compare/v0.0.4...v0.0.5)
+
+### 🐛 Bug Fixes
+
+- Fix media query type max condition
+
 ## v0.0.4
 
 [compare changes](https://github.com/mickaelchanrion/data-scroll/compare/v0.0.3...v0.0.4)
