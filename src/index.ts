@@ -58,8 +58,8 @@ function getMediaQuery(
   }
 
   return type === 'min'
-    ? `(min-width: ${screens[screen]})`
-    : `(max-width: ${Number.parseInt(screens[screen]) - 1}px)`
+    ? `(width >= ${screens[screen]})`
+    : `(width <= ${screens[screen]})`
 }
 
 function warn(message: string) {
