@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.0.4
+
+[compare changes](https://github.com/mickaelchanrion/data-scroll/compare/v0.0.3...v0.0.4)
+
+### 🚀 Enhancements
+
+- Allow medias queries with units other than `px`
 
 ## v0.0.3
 
